@@ -113,16 +113,16 @@
             <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">4.3 Response code rules</a></li>
             <li class="nav-item section-title mt-3">
               <a class="nav-link scrollto" href="#section-5"
-                ><span class="theme-icon-holder mr-2"><i class="fas fa-tools"></i></span>Reports</a
+                ><span class="theme-icon-holder mr-2"><i class="fas fa-tools"></i></span>CLI Options</a
               >
             </li>
-            <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">5.1 Example report</a></li>
+            <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">5.1 Examples</a></li>
             <li class="nav-item section-title mt-3">
               <a class="nav-link scrollto" href="#section-9"
                 ><span class="theme-icon-holder mr-2"><i class="fas fa-lightbulb"></i></span>FAQs</a
               >
             </li>
-            <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">6.1 Asking good questions</a></li>
+            <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">6.1 Prerequisites</a></li>
           </ul>
         </nav>
         <!--//docs-nav-->
@@ -165,8 +165,7 @@
                     Tip
                   </h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Link example</a> aenean
-                    commodo ligula eget dolor.
+                    This test POSTs the text "Hello world" to localhost:3000/posts and then GETs the same post and checks that it has text that equals to "Hello world"
                   </p>
                 </div>
                 <!--//content-->
@@ -180,49 +179,46 @@
               <h1 class="docs-heading">Installation</h1>
               <section class="docs-intro">
                 <p>
-                  Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus
-                  condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh
-                  convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a.
-                  Fusce in malesuada odio.
+				  The reference implementation of AARTL is implemneted using TypeScript and Node.js. <br/><br/>
+				  You have two options for running it on your machine:
+				  <ul>
+					  <li>Run a self-contained release</li>					  
+					  <li>Build from source</li>
+				  </ul>
+
+				  <h3>Run a self-contained release</h3>
+				  <p>
+				  	To run one of the self-contained releases down the right one for your operating system from the Download link above and run it as a command line application.
+				  </p>
+
+				  <h3>Build from source</h3>
+
+				  If you are familiar with Node.js and would like the least (possibly unstable) build you can git clone the repository and then do the following steps:
+				  <ol>
+					  <li>npm ci</li>
+					  <li>npm run build</li>
+					  <li>node dist/aartle.js -f FILE_YOU_WANT_TO_RUN.aartl</li>
+				  </ol>
+				  On Linux you may need to use sudo for npm ci 
                 </p>
               </section>
               <!--//docs-intro-->
             </header>
             <section class="docs-section" id="item-2-1">
-              <h2 class="section-heading">Section Item 2.1</h2>
+              <h2 class="section-heading">2.1 Visual Studio Code extension</h2>
               <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
+				A Visual Studo Code <a href="https://marketplace.visualstudio.com/items?itemName=IvanKouznetsov.aartl-lang-server">extension</a> is available which 
+				provides the following benefits:
+				<ul>
+					<li>Syntax highlighting</li>
+					<li>Code completion</li>
+					<li>Automatically generating test rules</li>
+					<li>Running tests from within the IDE</li>
+				</ul>
               </p>
             </section>
             <!--//section-->
 
-            <section class="docs-section" id="item-2-2">
-              <h2 class="section-heading">Section Item 2.2</h2>
-              <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
-              </p>
-            </section>
-            <!--//section-->
-
-            <section class="docs-section" id="item-2-3">
-              <h2 class="section-heading">Section Item 2.3</h2>
-              <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
-              </p>
-            </section>
-            <!--//section-->
           </article>
           <!--//docs-article-->
 
@@ -230,50 +226,92 @@
             <header class="docs-header">
               <h1 class="docs-heading">Getting Started</h1>
               <section class="docs-intro">
-                <p>
-                  Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus
-                  condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh
-                  convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a.
-                  Fusce in malesuada odio.
-                </p>
+				<p>A test consists of a name, optional constant values, optional “After” blocks, and a required "Expect" block. JSON data is referred to within AARTL using JSON paths. For more information about the JSON path standard you may refer to: <a href="https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html" rel="nofollow">https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html</a></p>
+				<p>An After block consists of:</p>
+				<ul>
+				<li>The data needed to make a request</li>
+				<li>Optional statements about how to handle transitioning to the next request.</li>
+				</ul>
+				<p>Data needed for an HTTP request is:</p>
+				<ul>
+				<li>headers <strong><em>Example</em></strong>: 'Accept-Encoding': '*/*'</li>
+				<li>method <strong><em>Example</em></strong>: post</li>
+				<li>url <strong><em>Example</em></strong>: <a href="http://example.org/things/123" rel="nofollow">http://example.org/things/123</a></li>
+				<li>body <strong><em>Example</em></strong>: Hello World</li>
+				</ul>
+				<p>Optional statements about how to handle transitioning to the next request are:</p>
+				<ul>
+				<li>Pass on – the Pass on statement can be used to pass on a value from a
+				response to the next block. <strong><em>Example</em></strong>: Pass on “$..id” as _id, this
+				means that we can refer to the id returned by this request in the
+				next request using the _id symbol. The $..id is a JSON path.</li>
+				<li>Wait – the Wait statement indicates that there will be a waiting
+				period before the next request starts</li>
+				</ul>
+				<p>An Expect block consists of:</p>
+				<ul>
+				<li>Data needed to make a request (same as an After block)</li>
+				<li>Expectations for what the response should be, there are three types
+				of expectations: - JSON data expectations - Header expectations - Status code expectation</li>
+				</ul>
+				<p>JSON data expectations consist of:</p>
+				<ul>
+				<li>A JSON path and either a literal value or a rule.</li>
+				</ul>
+
+				Consider the following example:
+				<pre>
+					Test that it should save a post and check id
+					Using values
+					  @postText: Hello world
+					Expect HTTP request
+					  method: POST
+					  url: http://localhost:3000/posts
+					  body: @postText
+					To match JSON rules
+					  "$..id": >= 0
+				</pre>
+				In this example "should save a post and check id" is the name of the test.<br/>
+				@postText is a constant value equal to "Hello world"<br/>
+				POST is the method used for this request<br/>
+				http://localhost:3000/posts is the URL being requested<br/>
+				"$..id" is  JSON path<br/>
+				"$..id": >= 0 is a rule that means that each value that matches the JSON path must be greater than or equal to 0
+
               </section>
               <!--//docs-intro-->
             </header>
             <section class="docs-section" id="item-3-1">
-              <h2 class="section-heading">Section Item 3.1</h2>
+              <h2 class="section-heading">3.1 Writing your first test</h2>
               <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
+				<p>
+					Once the AARTL test runner is setup on your computer you can write your first test and run it.
+					<br/>
+					You can use the <a href="https://jsonplaceholder.typicode.com/">JSON placeholder website</a> (no affiliation) to write your first AARTL tests.
+					
+				  </p>
               </p>
             </section>
             <!--//section-->
 
             <section class="docs-section" id="item-3-2">
-              <h2 class="section-heading">Section Item 3.2</h2>
+              <h2 class="section-heading">3.2 Generating test rules</h2>
               <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
+				The extension can automatically generate JSON-based rules for a test consisting of a GET request by fetching the JSON response and analysing petterns therein. 
+				<br/>
+				To generate a set of rules for a test using the SON placeholder website, write the follwong:
+				
+				<pre>
+					Test that it should have id greater than 50
+					Expect HTTP request
+						method: get
+						url: https://jsonplaceholder.typicode.com/posts 
+					To match JSON rules
+				</pre>
+				You should see a code lens link at the top of the test that says Generate JSON Rules, click it, if all goes well some JSON-based rules should be added to the test.
               </p>
             </section>
-            <!--//section-->
-
-            <section class="docs-section" id="item-3-3">
-              <h2 class="section-heading">Section Item 3.3</h2>
-              <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
-              </p>
-            </section>
-            <!--//section-->
+            <!--//section-->          
           </article>
           <!--//docs-article-->
 
@@ -282,46 +320,164 @@
               <h1 class="docs-heading">Rules</h1>
               <section class="docs-intro">
                 <p>
-                  Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus
-                  condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh
-                  convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a.
-                  Fusce in malesuada odio.
+                The test verifies that the response complies with ceratin rules.
                 </p>
               </section>
               <!--//docs-intro-->
             </header>
             <section class="docs-section" id="item-4-1">
-              <h2 class="section-heading">Section Item 4.1</h2>
-              <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
-              </p>
+              <h2 class="section-heading">4.1 JSON-based rules</h2>
+              <div class="markdown-body">
+				<p>JSON rules consist of:</p>
+				<ul>
+				<li>A JSON path and either a literal value or a rule.</li>
+				</ul>
+				<p>The possible rules are (<em>x, y, z in the rules refer to parameters</em>):</p>
+				<table role="table">
+				<thead>
+				<tr>
+				<th>Rule</th>
+				<th>What it means</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<td>is a number</td>
+				<td>checks if every value that matches the JSON path is a number</td>
+				</tr>
+				<tr>
+				<td>&gt; x</td>
+				<td>checks if every value that matches the JSON path is a number greater than x</td>
+				</tr>
+				<tr>
+				<td>&gt;= x</td>
+				<td>checks if every value that matches the JSON path is a number greater than or equal to x</td>
+				</tr>
+				<tr>
+				<td>&lt; x</td>
+				<td>checks if every value that matches the JSON path is a number less than x</td>
+				</tr>
+				<tr>
+				<td>&lt;= x</td>
+				<td>checks if every value that matches the JSON path is a number less than or equal to x</td>
+				</tr>
+				<tr>
+				<td>is text</td>
+				<td>checks if every value that matches the JSON path is text of length 1 or longer</td>
+				</tr>
+				<tr>
+				<td>is text containing x</td>
+				<td>checks if every value that matches the JSON path is text that contains x</td>
+				</tr>
+				<tr>
+				<td>is text not containing x</td>
+				<td>checks if every value that matches the JSON path is text that does not contain x</td>
+				</tr>
+				<tr>
+				<td>is any of x y z</td>
+				<td>checks if every value that matches the JSON path is one of the values</td>
+				</tr>
+				<tr>
+				<td>is not x</td>
+				<td>checks if every value that matches the JSON path is not x</td>
+				</tr>
+				<tr>
+				<td>matches x</td>
+				<td>checks if every value that matches the JSON path matches the regular expression x</td>
+				</tr>
+				<tr>
+				<td>count = x</td>
+				<td>checks if the number of values that matches the JSON path is x</td>
+				</tr>
+				<tr>
+				<td>count &gt; x</td>
+				<td>checks if the number of values that matches the JSON path is greater than x</td>
+				</tr>
+				<tr>
+				<td>count &gt;= x</td>
+				<td>checks if the number of values that matches the JSON path is greater than or equal to x</td>
+				</tr>
+				<tr>
+				<td>count &gt; x</td>
+				<td>checks if the number of values that matches the JSON path is greater than x</td>
+				</tr>
+				<tr>
+				<td>count &gt;= x</td>
+				<td>checks if the number of values that matches the JSON path is greater than or equal to x</td>
+				</tr>
+				<tr>
+				<td>count &lt; x</td>
+				<td>checks if the number of values that matches the JSON path is less than x</td>
+				</tr>
+				<tr>
+				<td>count &lt;= x</td>
+				<td>checks if the number of values that matches the JSON path is less than or equal to x</td>
+				</tr>
+				<tr>
+				<td>each has x</td>
+				<td>checks if every value that matches the JSON path is an object with a property called x</td>
+				</tr>
+				<tr>
+				<td>properties limited to x y z</td>
+				<td>checks if every value that matches the JSON path is an object the properties of which cannot be anything other than x y or z</td>
+				</tr>
+				<tr>
+				<td>is after x</td>
+				<td>checks if every value that matches the JSON path is a date after x</td>
+				</tr>
+				<tr>
+				<td>is as early as x</td>
+				<td>checks if every value that matches the JSON path is a date as early as x</td>
+				</tr>
+				<tr>
+				<td>is as late as x</td>
+				<td>checks if every value that matches the JSON path is a date up to and including x</td>
+				</tr>
+				<tr>
+				<td>is a date</td>
+				<td>checks if every value that matches the JSON path is a date</td>
+				</tr>
+				<tr>
+				<td>is earlier than x</td>
+				<td>checks if every value that matches the JSON path is a date earlier than x</td>
+				</tr>
+				<tr>
+				<td>is same date as x</td>
+				<td>checks if every value that matches the JSON path is a date with the same year day, month, and day as x</td>
+				</tr>
+				<tr>
+				<td>is same date and time as x</td>
+				<td>checks if every value that matches the JSON path is a date with the same year day, month, and day and time as x</td>
+				</tr>
+				<tr>
+				<td>is sorted asc/desc</td>
+				<td>checks if the values that match the JSON path are stored in either ascending or descending order, one of the following types is automatically inferred: number, date, string</td>
+				</tr>
+				</tbody>
+				</table>  
+			  </div>
             </section>
             <!--//section-->
 
             <section class="docs-section" id="item-4-2">
-              <h2 class="section-heading">Section Item 4.2</h2>
-              <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
-              </p>
+              <h2 class="section-heading">4.2 Header rules</h2>              
+				<p>Header name followed by a colon and the expected value or a rule.
+					There is one header rule, it is "must not be present".
+					Examples:</p>
+					<pre><code>"X-Powered-By":"Express"
+					"X-Powered-By": must not be present /* will fail if this header is sent */
+					</code></pre>              
             </section>
             <!--//section-->
 
             <section class="docs-section" id="item-4-3">
-              <h2 class="section-heading">Section Item 4.3</h2>
+              <h2 class="section-heading">4.3 Response code rules</h2>
               <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
+				That the expected response code was returned by the server can be checked like so:
+				<code>
+					To respond with status code 200
+				</code>
+				This can be useful to prevent <a href="https://support.google.com/webmasters/answer/181708?hl=en">soft 404s</a> and in other situations where returning the correct error code is important.
               </p>
             </section>
             <!--//section-->
@@ -330,52 +486,69 @@
 
           <article class="docs-article" id="section-5">
             <header class="docs-header">
-              <h1 class="docs-heading">Reports</h1>
+              <h1 class="docs-heading">CLI Options</h1>
               <section class="docs-intro">
-                <p>
-                  Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus
-                  condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh
-                  convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a.
-                  Fusce in malesuada odio.
-                </p>
+                <table>
+					<thead>
+					<tr>
+					<th>Option</th>
+					<th>What it means</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td>--hello</td>
+					<td>Print the name of the program before running tests</td>
+					</tr>
+					<tr>
+					<td>--xml</td>
+					<td>Output results as JUnit XML</td>
+					</tr>
+					<tr>
+					<td>--novalidation</td>
+					<td>Don't validate test file</td>
+					</tr>
+					<tr>
+					<td>--r</td>
+					<td>Randomize test order</td>
+					</tr>
+					<tr>
+					<td>-n N</td>
+					<td>Rerun the tests a number of times</td>
+					</tr>
+					<tr>
+					<td>-m N</td>
+					<td>Maximum concurrent tests. Default: no limit</td>
+					</tr>
+					<tr>
+					<td>--report</td>
+					<td>Output an html report with failure rates</td>
+					</tr>
+					<tr>
+					<td>--q</td>
+					<td>Don't output real-time test results</td>
+					</tr>
+					<tr>
+					<td>--log</td>
+					<td>Output request logs</td>
+					</tr>
+					<tr>
+					<td>--ff</td>
+					<td>Exit with error code 1 as as soon as one test fails</td>
+					</tr>
+					</tbody>
+					</table>
               </section>
               <!--//docs-intro-->
             </header>
             <section class="docs-section" id="item-5-1">
-              <h2 class="section-heading">Section Item 5.1</h2>
+              <h2 class="section-heading">5.1 Examples</h2>
               <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
+				<code> aatrl -f example.aartl --report --q -n 100 </code> Means run all the tests in example.aartl 100 times and produce a report, do not output the test results in real times
+				<code> aatrl -f example.aartl --ff </code> Means run all the tests in example.aartl once and exit with an error code of 1 as soon as one test fails				
               </p>
             </section>
-            <!--//section-->
-
-            <section class="docs-section" id="item-5-2">
-              <h2 class="section-heading">Section Item 5.2</h2>
-              <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
-              </p>
-            </section>
-            <!--//section-->
-
-            <section class="docs-section" id="item-5-3">
-              <h2 class="section-heading">Section Item 5.3</h2>
-              <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo.
-                Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum
-                imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies
-                porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo
-                sollicitudin est. Vestibulum ultricies malesuada tempor.
-              </p>
-            </section>
-            <!--//section-->
+            <!--//section-->           
           </article>
           <!--//docs-article-->
 
@@ -383,96 +556,24 @@
             <header class="docs-header">
               <h1 class="docs-heading">FAQs</h1>
               <section class="docs-intro">
-                <p>Section intro goes here. You can list all your FAQs using the format below.</p>
+                <p>Questions you might have</p>
               </section>
               <!--//docs-intro-->
             </header>
             <section class="docs-section" id="item-6-1">
-              <h2 class="section-heading">Section Item 9.1 <small>(FAQ Category One)</small></h2>
-              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>What's sit amet quam eget lacinia?</h5>
+              <h2 class="section-heading">6.1 <small>Prerequisites</small></h2>
+              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>What operating system can AARTL run on?</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-                massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-                felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-                justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+				Current versions of Windows, common Linux distributions, macOS, freeBSD 
               </p>
-              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>How to ipsum dolor sit amet quam tortor?</h5>
+              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>What does the word "agnostic" in AARTL refer to?</h5>
               <p>
-                Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis
-                gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut,
-                mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.
-              </p>
-              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Can I bibendum sodales?</h5>
-              <p>
-                Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
-                Nullam accumsan lorem in dui.
-              </p>
-              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Where arcu sed urna gravida?</h5>
-              <p>
-                Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac.
-                In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
-                sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est,
-                imperdiet eu viverra viverra, ultricies nec urna.
+                The fact that it is indifferent to the plaform on which your server is based.
               </p>
             </section>
             <!--//section-->
 
-            <section class="docs-section" id="item-6-2">
-              <h2 class="section-heading">Section Item 9.2 <small>(FAQ Category Two)</small></h2>
-              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>What's sit amet quam eget lacinia?</h5>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-                massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-                felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-                justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-              </p>
-              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>How to ipsum dolor sit amet quam tortor?</h5>
-              <p>
-                Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis
-                gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut,
-                mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.
-              </p>
-              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Can I bibendum sodales?</h5>
-              <p>
-                Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
-                Nullam accumsan lorem in dui.
-              </p>
-              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Where arcu sed urna gravida?</h5>
-              <p>
-                Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac.
-                In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
-                sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est,
-                imperdiet eu viverra viverra, ultricies nec urna.
-              </p>
-            </section>
-            <!--//section-->
-
-            <section class="docs-section" id="item-6-3">
-              <h2 class="section-heading">Section Item 9.3 <small>(FAQ Category Three)</small></h2>
-              <h5 class="pt-3">
-                <i class="fas fa-question-circle mr-1"></i>How to dapibus sollicitudin justo vel fermentum?
-              </h5>
-              <p>
-                Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis
-                gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut,
-                mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.
-              </p>
-              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>How long bibendum sodales?</h5>
-              <p>
-                Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus.
-                Nullam accumsan lorem in dui.
-              </p>
-              <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Where dapibus sollicitudin?</h5>
-              <p>
-                Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac.
-                In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus
-                sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est,
-                imperdiet eu viverra viverra, ultricies nec urna.
-              </p>
-            </section>
-            <!--//section-->
+            
           </article>
           <!--//docs-article-->
 
