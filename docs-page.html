@@ -464,7 +464,7 @@
 				<p>Header name followed by a colon and the expected value or a rule.
 					There is one header rule, it is "must not be present".
 					Examples:</p>
-					<pre><code>"X-Powered-By":"Express"
+					<pre><code>"X-Powered-By":"Express" /* will pass if this header is sent and equals to Express */
 "X-Powered-By": must not be present /* will fail if this header is sent */
 					</code></pre>              
             </section>
